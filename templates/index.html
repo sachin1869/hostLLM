@@ -4,13 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LayoutLM Flask App</title>
-    <link rel="stylesheet" href="/style.css">
+    
+    <style>
+        body {
+          background-color: linen;
+        }
+        
+        h1 {
+          color: rgb(17, 3, 3);
+          text-align: center;
+        }
+        form {
+          background-color: brown;
+          margin: 20px auto;
+          max-width: 600px;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 15px;
+          
+        }
+        input{
+          text-align: left;
+          margin-bottom: 10px;
+          /* border-radius: 15px; */
+        }
+
+        button {
+            text-align: right;
+            padding: 10px 100px;
+            background-color: #007bff;
+            color: #d8cfcf;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Upload Image</h1>
+    <h1 >Input Your Image</h1>
     <form action="/predict" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept="image/*">
-        <button type="submit">Predict</button>
+        <input type="file" name="file" >
+        <button type="submit">Output Image</button>
     </form>
 </body>
 </html>
